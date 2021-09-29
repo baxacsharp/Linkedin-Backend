@@ -1,2 +1,2 @@
-# DB-Buildweek
- Database Backend Strive Team Build Week
+# Linkedin-backend
+Linkedin-backend using postgresSql
