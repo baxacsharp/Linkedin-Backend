@@ -10,7 +10,7 @@ import postsRouter from "./services/posts/posts.js"
 import listEndpoints from "express-list-endpoints"
 
 const server = express()
-const port = 5000
+const port = process.env.PORT || 5000
 
 server.use(cors())
 server.use(express.json())
