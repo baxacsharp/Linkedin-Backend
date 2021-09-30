@@ -6,7 +6,7 @@ const { PGUSER, PGPORT, PGDATABASE, PGPASSWORD } = process.env
 
 const sequelize = new Sequelize(PGDATABASE, PGUSER, PGPASSWORD, {
   port: PGPORT,
-  host: "localhost",
+  host: "https://linkedin-sql.herokuapp.com",
   dialect: "postgres",
 })
 
