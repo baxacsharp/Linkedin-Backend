@@ -7,7 +7,12 @@ const sequelize = new Sequelize(DATABASE_URL, {
   port: PGPORT,
   host: PGHOST,
   dialect: "postgres",
-  ssl: { rejectUnauthorized: false },
+  dialectOptions: {
+    ssl: {
+      required: true,
+      rejectUnauthorized: false,
+    },
+  },
 })
 
 sequelize
