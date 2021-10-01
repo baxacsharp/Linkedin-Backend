@@ -2,9 +2,9 @@
 import s from "sequelize"
 const { Sequelize, DataTypes } = s
 
-const { PGUSER, PGPORT, PGDATABASE, PGPASSWORD } = process.env
+const { PGUSER, PGPORT, PGDATABASE, PGPASSWORD, DATABASE_URL } = process.env
 
-const sequelize = new Sequelize(PGDATABASE, PGUSER, PGPASSWORD, {
+const sequelize = new Sequelize(DATABASE_URL, {
   port: PGPORT,
   host: "https://linkedin-sql.herokuapp.com",
   dialect: "postgres",
