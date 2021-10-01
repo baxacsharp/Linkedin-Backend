@@ -1,9 +1,7 @@
 //create pool here
 import s from "sequelize"
 const { Sequelize, DataTypes } = s
-import { Pool } from "pg"
 const { PGUSER, PGPORT, PGDATABASE, PGPASSWORD, DATABASE_URL } = process.env
-const pool = new Pool()
 
 const sequelize = new Sequelize(DATABASE_URL, {
   port: PGPORT,
