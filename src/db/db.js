@@ -7,6 +7,7 @@ const sequelize = new Sequelize(DATABASE_URL, {
   port: PGPORT,
   host: "https://linkedin-sql.herokuapp.com",
   dialect: "postgres",
+  ssl: { rejectUnauthorized: false },
 })
 
 sequelize
