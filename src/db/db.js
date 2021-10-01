@@ -1,11 +1,11 @@
 //create pool here
 import s from "sequelize"
 const { Sequelize, DataTypes } = s
-const { PGUSER, PGPORT, PGDATABASE, PGPASSWORD, DATABASE_URL } = process.env
+const { PGHOST, PGPORT, PGDATABASE, PGPASSWORD, DATABASE_URL } = process.env
 
 const sequelize = new Sequelize(DATABASE_URL, {
   port: PGPORT,
-  host: "https://linkedin-sql.herokuapp.com",
+  host: PGHOST,
   dialect: "postgres",
   ssl: { rejectUnauthorized: false },
 })
